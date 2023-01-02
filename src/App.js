@@ -1,9 +1,14 @@
 import { createTheme } from "@mui/material/styles";
-import { CssBaseline, ThemeProvider } from "@mui/material";
+import { CssBaseline, Grid, ThemeProvider } from "@mui/material";
 import Topbar from "./scenes/global/Topbar";
 import LeftSidebar from "./scenes/global/Sidebar";
+import { ProSidebarProvider } from "react-pro-sidebar";
+import Content from "./scenes/content";
 
 const theme = createTheme({
+  root: {
+    backgroundColor: "#f8f8f8"
+  },
   palette: {
     primary: {
       main: "#000000",
@@ -32,9 +37,12 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <div className="app">
+        <ProSidebarProvider>
           <LeftSidebar />
+        </ProSidebarProvider>
         <main className="content">
           <Topbar />
+          <Content />
         </main>
       </div>
     </ThemeProvider>

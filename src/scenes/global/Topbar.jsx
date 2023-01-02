@@ -6,7 +6,7 @@ const currentDate = new Date();
 
 const Topbar = () => {
     return (
-    <Box display="flex" justifyContent="space-between" p={2}>
+    <Box display="flex" justifyContent="space-between" p={2} sx={{ background: 'linear-gradient(to right bottom, #fafafa, #ffffff)'}}>
         <Box display="inline-block" >
             <Typography variant="h3">Good Morning, Kabila</Typography>
             {/* use momentJs */}
